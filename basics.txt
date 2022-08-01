@@ -1,0 +1,317 @@
+ //This should be for the reminder, and a basic concept for the coding python.
+   Symbols OF USE:   (*) to know use of the Variables path
+
+  # Variables and Data types
+
+
+  * To use the string Variables  
+ str = "Saft"
+print(str)
+
+
+  *To extract the letter from the word by using numbers
+str = "HeLLO_WORLD"
+print(str[0])
+
+  *To add the variable automatically
+character_name = "John"   
+print ("There was a man named "+ character_name +", ")
+
+  *Bullayan value(True, False values)
+is-male = True
+
+  *To make word upon type use(\n)
+print("Abhishek\nDroid")
+
+  *To print quotation mark in between the word(\")
+print("Abhishek\"Droid")
+
+  *To do in a standard way
+Phrase = "Abhishek Droid"
+print(phrase)
+
+  *Concatination / To add more word after writing
+Phrase = "Abhishek" 
+print(Phrase + " is cool")
+
+  *To make words written in capital or small letters(upper / lower)
+Phrase = "Abhishek"
+print(Phrase. lower())
+
+  *To know the string is written in what order upper or lower by true / false value.
+Phrase = 'Abhishek'
+print(Phrase.isupper())
+
+  *To know how many letters are in Phrase 
+Phrase = "Abhishek Droid"
+print(len(Phrase))
+
+  *count of the letter
+print(Phrase.index('A'))
+
+  *same count but in letter
+print(Phrase[0])
+
+  *To replace the word or letter
+print(Phrase.replace("Abhishek", "Tiger")) 
+
+  *To get the absolute value
+my_num = -5
+print(abs(my-num))
+
+  *To get the power of no.
+print (pow(4, 6))
+ 
+  *To get the higher no. by measuring \ lower(min\max)
+print (min(4, 6))
+
+  *To get the accurate no. of decimal
+print(round(3.7))
+ 
+  *To get the lower accurate no. of decimal
+print(float(3.7))
+
+ 
+
+
+  // MAIN  WAY  
+
+  *To get user input
+name = input("Enter your name: ")
+print("Hello " + name + "!")   
+
+  *To make calculator(To use decimal no. use(Float) for normal(int)) 
+num1 = input("Enter a number: ")
+num2 = input("Enter a number: ")
+result = float(num1) + float(num2)
+
+print(result)
+
+  *To make madlibs Game
+color = input("Enter a color: ")
+pluralnoun = input("Enter a pluralnoun: ")
+celebrity = input("Enter a celebrity: ")
+
+print("Roses are "+ color)
+print(pluralnoun + " are blue")
+print("I love "+ celebrity)
+
+  //List
+  *To extend the variables
+lucky_numbers = [4, 8, 15]
+Friends = ["Kevin", "Karen"]
+Friends.extend(lucky_numbers)
+print(Friends)
+
+  *To add in the list 
+friends.append(creed)
+print(friends)
+
+  *To add between the list
+friends.insert(1, "Kelly")
+print(friends)
+
+  *To remove from the list
+friends.remove("Karen")
+print(friends)
+
+  *To clear all the list
+friends.clear()
+print(friends)
+
+  *To remove the last variable from the list
+friends.pop()
+print(friends)
+
+   *To copy the same variable
+friends 2 = friends.copy()
+print(friends2)
+
+  *To check the certain word in the list
+print(friends.index("Kevin"))
+
+  *To write variable in ascending order
+friends.sort()            for decreasing: friends.reverse()
+print(friends)
+
+  *While loop
+i = 1
+while i <= 10:
+  print(i)
+  i += 1
+print("Done with loop")
+
+
+//** Guessing Game    using While and If NOT
+secret_word = "Abhishek"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = input("Enter guess: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+      print("Out of guesses, You Lose!")
+else:
+     print("You win!")
+
+
+  *For Loop statement
+friends = ["Jim", "Karen", "Kevin"]
+for friend in friends:      
+    print(friend)
+
+  *again loop in index
+friends = ["Jim", "k", "Kevin"]
+
+for index in range(len(friends)):
+    print(friends[index])
+
+  *Exponent Function / to get the power
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+print(raise_to_power(2, 3))
+
+  *To add something in the list
+employee_file = open("employees.txt", "a")
+
+employee_file.write("Toby_Human Resources")
+
+employee_file.close()
+
+  *To save the file
+employee_file = open("employes.txt", "r")
+
+print(employee_file.readline())
+
+  *In for loop
+employee_file = open("employees,txt", "r")
+for employee in employee_file.readlines():
+    print(employee)
+    employee_file.close()
+
+  *To see the list
+employee_file = open("employees.txt", "r")
+print(employee_file.read())
+employee_file.close()
+
+  *Translator
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+      if letter in "AEIOUaeiou":
+         translation = translation + "g"
+      else:
+         translation = translation + letter
+    return translation
+
+print(translate(input("Enter a phrase: ")))
+
+   *Try not to break all the program by one mistake use except
+try:
+   number = int(input("Enter a number: "))
+   print(number)
+except:
+   print("Invalid Input")
+
+   *Numbergrid list(Matrix)
+Number_grid = [
+     [1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9],
+     [0]
+]
+print(Number_grid[0][0])
+
+    *2D
+number_grid = [
+     [1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9],
+]
+
+for row in number_grid:
+    for col in row:
+         print(col)
+
+
+    //Tuples can not be changed(Coordinates)
+    *Function
+def say_hi(name, age):
+    print("Hello " + name + " you are " + str(age))
+
+say_hi("Mike", 35)
+
+   *To run cube in function
+def cube(num):
+    return num*num*num
+
+result = cube(4)
+print(result)
+
+  *If statements. (For both use (elif))
+is_male = True
+
+if is_male:
+   print("You are a male")
+else:
+  print("You are not a male")
+
+
+  *Advanceed  Calculator
+num1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+num2 = float(input("'Enter a second number:  "))
+
+if op == "+":
+   print(num1 + num2)
+elif op == "-":
+   print(num1 - num2)
+elif op == "*":
+   print(num1 * num2)
+elif op == "/":
+   print(num1 / num2)
+else:
+   print("Invalid operator")
+
+
+ *To make teh achievement made by the student list.
+ 
+   *//app.py 
+from Student import Student
+
+student1 = Student("Oscar", "Accounting", 3.1)
+student2 = Student("Phyllis", "Business", 3.8)
+
+print(student1.on_honor_roll())
+
+
+  *//Student.py
+class Student:Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   def __init__(self, name, major, gpa):
+       self.name = name 
+       self.major = major
+       self.gpa = gpa
+
+   def on_honor_roll(self):
+      if self.gpa >= 3.5:
+         return True
+      else:
+         return False 
+
+
